@@ -274,7 +274,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
             : Container(),
 
         //the backdrop to overlay on the body
-        !widget.backdropEnabled
+        (!widget.backdropEnabled || !_isPanelVisible)
             ? Container()
             : GestureDetector(
                 onVerticalDragEnd: widget.backdropTapClosesPanel
